@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <form action="" method="post" class="search">
+        {%csrf_token%}
+        <input type="text" placeholder="Enter city" name="city" />
+        <button type="submit">
+          <img src="{%static 'images/search.png'%}" alt="" />
+        </button>
+      </form>
+      <p>City: {{city | capfirst}}</p>
+      <p id="description">
+        {{description| capfirst}}
+        <img src="https://api.openweathermap.org/img/w/{{icon}}.png" alt="" />
+      </p>
+      <div>
+        <p>Current temperature: {{temp}}°C / {{fahrenheit}}°F</p>
+      </div>
+      <p>Min-max temperature:</p>
+      <p>{{temp_min}} - {{temp_max}}°C</p>
+      <details>
+        <p>Pressure: {{pressure}} mb</p>
+        <!--<p>{{humidity}}</p>-->
+        <p>Wind: {{wind}}m/s</p>
+        <p>Coordinates: <br />N:{{lon}} - E:{{lat}}</p>
+      </details>
+    </div>
+  </body>
+</html>
