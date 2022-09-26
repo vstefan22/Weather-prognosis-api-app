@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body style='background-color: #46484b;'>
 
   <div class="container bg-light w-50 m-auto mt-3 p-3">
     {{date}}
@@ -49,9 +49,172 @@
       </ul>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+  <div class="row m-5">
+    <div class="col-md">
+      <div class="card bg-light text-dark">
+        <div class="card-body text-center">
+
+          <h5 class="card-title mb-3">{{new_date_list.0}}</h5>
+          <p class="card-text">
+            <img src=" https://api.openweathermap.org/img/w/{{weather_icon_list.0}}.png">
+            <br>
+            {{current_temp_list.0}}°C
+            <br>
+
+            {{weather_desc_list.0|title}}
+
+
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Details
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Humidity: {{humidity_list.0}}</a></li>
+              <li><a class="dropdown-item" href="#">Pressure: {{pressure_list.0}}</a></li>
+            </ul>
+          </div>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <div class="card bg-light text-dark">
+        <div class="card-body text-center">
+
+          <h5 class="card-title mb-3">{{new_date_list.1}}</h5>
+          <p class="card-text">
+            <img src=" https://api.openweathermap.org/img/w/{{weather_icon_list.1}}.png">
+            <br>
+            {{current_temp_list.1}}°C
+            <br>
+
+            {{weather_desc_list.1|title}}
+
+
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Details
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Humidity: {{humidity_list.1}}</a></li>
+              <li><a class="dropdown-item" href="#">Pressure: {{pressure_list.1}}</a></li>
+            </ul>
+
+          </div>
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <div class="card bg-light text-dark">
+        <div class="card-body text-center">
+
+          <h5 class="card-title mb-3">{{new_date_list.2}}</h5>
+          <p class="card-text">
+            <img src=" https://api.openweathermap.org/img/w/{{weather_icon_list.2}}.png">
+            <br>
+            {{current_temp_list.2}}°C
+            <br>
+
+            {{weather_desc_list.2|title}}
+
+
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Details
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Humidity: {{humidity_list.2}}</a></li>
+              <li><a class="dropdown-item" href="#">Pressure: {{pressure_list.2}}</a></li>
+            </ul>
+
+          </div>
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md">
+      <div class="card bg-light text-dark">
+        <div class="card-body text-center">
+
+          <h5 class="card-title mb-3">{{new_date_list.3}}</h5>
+          <p class="card-text">
+            <img src=" https://api.openweathermap.org/img/w/{{weather_icon_list.3}}.png">
+            <br>
+            {{current_temp_list.3}}°C
+            <br>
+
+            {{weather_desc_list.3|title}}
+
+
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Details
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Humidity: {{humidity_list.3}}</a></li>
+              <li><a class="dropdown-item" href="#">Pressure: {{pressure_list.3}}</a></li>
+            </ul>
+
+          </div>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="card bg-light text-dark">
+        <div class="card-body text-center">
+
+          <h5 class="card-title mb-3">{{new_date_list.4}}</h5>
+          <p class="card-text">
+            <img src=" https://api.openweathermap.org/img/w/{{weather_icon_list.4}}.png">
+            <br>
+            {{current_temp_list.4}}°C
+            <br>
+
+            {{weather_desc_list.4|title}}
+
+
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Details
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Humidity: {{humidity_list.4}}</a></li>
+              <li><a class="dropdown-item" href="#">Pressure: {{pressure_list.4}}</a></li>
+            </ul>
+
+          </div>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-light">
+    <p class="text-center mb-4 lead fs-4">&copy;2022</p>
+  </footer>
 </body>
 
 </html>
