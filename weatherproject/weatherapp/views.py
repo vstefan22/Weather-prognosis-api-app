@@ -36,7 +36,6 @@ def index(request):
     PARAMS = {'q': city, 'appid':APPID, 'units': 'metric'}
     R = requests.get(url = URL1, params = PARAMS)
     pest = R.json()
-    print(pest)
     new_date_list = []
     current_temp_list = []
     pressure_list = []
@@ -44,7 +43,6 @@ def index(request):
     weather_info_list = []
     weather_desc_list = []
     weather_icon_list = []
-    print(current_temp_list)
     for i in range(40):
         if i % 8 == 0:
             new_date = pest['list'][i]['dt_txt']
@@ -71,4 +69,5 @@ def index(request):
      'lat':lat, 'min_fahrenheit':min_fahrenheit,'max_fahrenheit':max_fahrenheit,
       'date':date, 'new_date_list': new_date_list, 'current_temp_list': current_temp_list, 'pressure_list':pressure_list, 'humidity_list':humidity_list, 
       'weather_info_list':weather_info_list, 'weather_desc_list':weather_desc_list, 'weather_icon_list':weather_icon_list}
+    print(icon)
     return render(request, 'weatherapp/index.html', context)
